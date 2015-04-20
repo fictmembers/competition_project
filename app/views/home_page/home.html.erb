@@ -1,53 +1,48 @@
 <% provide(:title, "Home") %>
 <%= render 'layouts/header_home' %>
- <div class="slider">
-    <ul class="slides">
-      <li>
-        <%= image_tag "carousel_1.jpg" %>
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-         <%= image_tag "carousel_2.jpg" %>
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-         <%= image_tag "carousel_3.jpg" %>
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
-	<div class="about">
+<div class="img_block">
+      <a href="#" class="content_block">	
+      	<%= image_tag("carousel_1.jpg")%>
+     	<div class="over_block"></div>
+        <span>You can test your skills now</span>
+      </a>
+</div>
+<div class="about">
 		<section id="about">
 			<center>
-				<h1> ABOUT US</h1>
-				<h6></h6>
+				<h1> About us</h1>
 			</center>
 		</section>
-	</div>
-	<div class="table">
-		<section id="table">
+</div>
+<div class="sign">
+		<section id="sign">
 			<center>
-				<h1> INFORMATION </h1>
-				<h6></h6>
+				<h1> Sign in </h1>
+				<ul class="demo-2 effect">
+    				<li>
+       					<h2 class="zero">This is a cool title!</h2>
+       					<p class="zero">Lorem ipsum dolor sit amet.</p>
+    				</li>
+    				<li><%= image_tag("image1.jpg",class: "top") %></li>
+				</ul>
+
 			</center>
 		</section>
-	</div>
-	<div class="contacts">
-		<section id="contacts">
+</div>
+<div class="stat">
+	<section id="stat">
 			<center>
-				<h1> CONTACT US </h1>
-				<h6></h6>
+				<h1> Statistics </h1>
+				<%= image_tag("diagr_1.png")%>
+				<%= image_tag("diagr_2.png")%>
+			</center>
+	</section>
+</div>
+<div class="contacts">
+	<section id="contacts">
+			<center>
+				<h1> Contact us </h1>
 			</center>
 		</section>
-		<center>
-			<button> CONTACT US  </button></center>
-	</div>
+	<center>
+</div>
