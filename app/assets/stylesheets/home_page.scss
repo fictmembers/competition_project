@@ -2,50 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-/* Sign in */
-.signup {
-    position:relative;
-    width: 300px;
-    height: 200px;
-    overflow:hidden;
-    float:left;
-    margin-right:20px;
-    background-color:rgba(26,76,110,0.5)
-}
-.signup p,.signup h2 {
-    color:#fff;
-    padding:10px;
-    left:-20px;
-    top:20px;
-    position:relative
-}
-.signup p {
-    font-size:12px;
-    line-height:18px;
-    margin:0
-}
-.signup h2 {
-    font-size:20px;
-    line-height:24px;
-    margin:0;
-}
-.effect img {
-    position:absolute;
-    left:0;
-    bottom:0;
-    cursor:pointer;
-    margin:-12px 0;
-    -webkit-transition:bottom .3s ease-in-out;
-    -moz-transition:bottom .3s ease-in-out;
-    -o-transition:bottom .3s ease-in-out;
-    transition:bottom .3s ease-in-out
-}
-.effect img.top:hover {
-    bottom:-96px;
-    padding-top:100px
-}
-h2.zero,p.zero {
-    margin:0;
-    padding:0
+.sign-in
+{
+    background-color: #006064;
+    &:hover
+    {
+        background-color: black;
+    }
 }
