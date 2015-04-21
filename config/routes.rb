@@ -1,4 +1,7 @@
 CompetitionProject::Application.routes.draw do
+  get "users/new_user"
+
+  match '/signup', to: 'users#new_user' ,via: 'get'
   root "home_page#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
