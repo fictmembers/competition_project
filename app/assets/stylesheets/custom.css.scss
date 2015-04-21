@@ -1,4 +1,9 @@
 @import "materialize";
+a:hover,a:visited,a:active,a:link
+{
+	color: white;
+	text-decoration: none;
+}
 html , body 
 {
 	width: 100%;
@@ -7,3 +12,7 @@ html , body
 	margin:0 !important;
 }
 
+.section
+{
+	float: top;
+}

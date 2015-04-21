@@ -1,5 +1,5 @@
 $(document).ready(function() {
-        $("#menu").on("click", "a", function (event)    //обработка якорей
+        $("#nav-mobile").on("click", "a", function (event)    //обработка якорей
             {
                 event.preventDefault();     //отменяем стандартную обработку нажатия по ссылке
                 var id = $(this).attr('href');
@@ -8,7 +8,7 @@ $(document).ready(function() {
                 }
                 else
                 {
-                    var top = $(id).offset().top - 35 - $('.nav').height;
+                    var top = $(id).offset().top - 35 - $('.head').height;
                 }
                 $('body,html').animate({scrollTop: top}, 1500);
             });

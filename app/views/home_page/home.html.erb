@@ -1,35 +1,38 @@
 <% provide(:title, "Home") %>
+<%= javascript_include_tag "custom", "data-turbolinks-track" => true %>
 <%= render 'layouts/header_home' %>
-<div class="img_block">
-      <a href="#" class="content_block">	
-      	<%= image_tag("carousel_1.jpg")%>
-     	<div class="over_block"></div>
-        <span>You can test your skills now</span>
-      </a>
-</div>
-<div class="about">
+<!--<div class="row menu-pict">
+	<%= image_tag("carousel_1.jpg") %>
+</div> -->
+<div class="row section about">
 		<section id="about">
 			<center>
 				<h1> About us</h1>
 			</center>
 		</section>
 </div>
-<div class="sign">
+<div class="row section sign">
 		<section id="sign">
-			<center>
-				<h1> Sign in </h1>
-				<ul class="demo-2 effect">
+				<center>
+					<h1> Sign in </h1>
+				</center>
+				<ul class="signup effect">
     				<li>
        					<h2 class="zero">This is a cool title!</h2>
        					<p class="zero">Lorem ipsum dolor sit amet.</p>
     				</li>
     				<li><%= image_tag("image1.jpg",class: "top") %></li>
 				</ul>
-
-			</center>
+				<ul class="signup effect">
+    				<li>
+       					<h2 class="zero">This is a cool title!</h2>
+       					<p class="zero">Lorem ipsum dolor sit amet.</p>
+    				</li>
+    				<li><%= image_tag("image1.jpg",class: "top") %></li>
+				</ul>
 		</section>
 </div>
-<div class="stat">
+<div class="row section stat">
 	<section id="stat">
 			<center>
 				<h1> Statistics </h1>
@@ -38,7 +41,7 @@
 			</center>
 	</section>
 </div>
-<div class="contacts">
+<div class="row section contacts">
 	<section id="contacts">
 			<center>
 				<h1> Contact us </h1>
@@ -46,3 +49,4 @@
 		</section>
 	<center>
 </div>
+<%= render("layouts/footer_home") %>
