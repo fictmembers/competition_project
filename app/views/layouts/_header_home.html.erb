@@ -6,7 +6,11 @@
         <li><a href="#about"> About us </a></li>
         <li><a href="#sign"> Sign </a></li>
         <li><a href="#stat"> Statistic </a></li>
-        <li><%= link_to("Sign in","#",class: "sign-in") %></li>
+        <% if signed_in? %>
+          <li><%= link_to("Sign out",signout_path,method: 'delete',class: "sign-in") %></li>
+        <% else %>
+          <li><%= link_to("Sign in",signin_path,class: "sign-in") %></li>
+        <% end %>
       </ul>
     </div>
   </nav>

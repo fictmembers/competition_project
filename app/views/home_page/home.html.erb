@@ -1,9 +1,31 @@
 <% provide(:title, "Home") %>
 <%= javascript_include_tag "custom", "data-turbolinks-track" => true %>
 <%= render 'layouts/header_home' %>
-<div class="row section">
-	<%= image_tag("carousel_1.jpg",class: "menu-pict") %>
-</div> 
+ <div class="slider row section">
+    <ul class="slides">
+      <li>
+        <%= image_tag('carousel_1.jpg') %>
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <%= image_tag('carousel_2.jpg') %>
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <%= image_tag('carousel_3.jpg') %>
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
 <div class="row section about">
 		<section id="about">
 			<center>

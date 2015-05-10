@@ -1,8 +1,8 @@
-<% provide(:title, 'Sign up') %>
+<% provide(:title, 'Реєстрація користувача') %>
 <h1>Sign up</h1>
 
 <div class="row">
-  <div class="col s6 offset-s3">
+  <div class="col s6 card white offset-s3">
     <%= form_for(@user) do |f| %>
 	<%= render 'shared/error_messages' %> <!-- Rendering error messages -->
       <%= f.label :name %>
