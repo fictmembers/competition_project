@@ -1,0 +1,44 @@
+<% provide(:title, 'Sign Up Companies') %>
+
+<div class="row section about">
+			<left>
+				<div class="row">
+					<div class="col s6 offset-s3 grid-example">
+						<div class="card-panel">
+							<div class="card-title">
+								<h5> Реєстрація нової компанії</h5>
+							</div>
+							<%= form_for(@company) do |t| %>
+									<% if @company.errors.any? %>
+									  <div id="error_explanation">
+									    <div class="alert alert-error">
+									      Наявні помилки <%= pluralize(@company.errors.count, "error") %>.
+									    </div>
+									    <% @company.errors.full_messages.each do |msg| %>
+									      <li> <%= msg %></li>
+									    <% end %>
+									  </div>
+									<% end %>
+
+								<%= t.label :name, "Назва компанії" %>
+								<%= t.text_field :name %>
+
+								<%= t.label :manager, "Менеджер HR"%>
+								<%= t.text_field :manager %>
+
+								<%= t.label :email %>
+								<%= t.text_field :email %>
+
+								<%= t.label :password, "Пароль" %>
+								<%= t.text_field :password %>
+
+								<%= t.label :password_confirmation, "Підтвердження паролю" %>
+								<%= t.text_field :password_confirmation %>
+
+								<%= t.submit "Завершити реестрацію", class: "btn btn-large btn-primary"%>
+							<% end %>
+						</div>
+					</div>
+				</div>	
+			<left>
+</div>
