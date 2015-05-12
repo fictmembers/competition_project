@@ -12,6 +12,8 @@
       <%= f.password_field :password %>
 
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+      <%= check_box_tag :is_firm %>
+      <%= label_tag :is_firm,true %>
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>

@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 	validates(:email,presence:true,uniqueness: {case_sensetive: false},format: {with: VALID_EMAIL_REGEX})
 	has_secure_password
 	validates(:password,length:{minimum: 6})
+
 	def User.new_remember_token
     	SecureRandom.urlsafe_base64
     end

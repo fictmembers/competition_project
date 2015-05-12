@@ -4,21 +4,21 @@
  <div class="slider row section">
     <ul class="slides">
       <li>
-        <%= image_tag("carousel_1.jpg") %>
+        <%= image_tag("https://s3.amazonaws.com/StartupStockPhotos/20140808_StartupStockPhotos/105.jpg") %>
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <%= image_tag('carousel_2.jpg') %>
+        <%= image_tag("carousel_2.jpg") %>
         <div class="caption left-align">
           <h3>Left Aligned Caption</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <%= image_tag('carousel_3.jpg') %>
+        <%= image_tag("carousel_3.jpg") %>
         <div class="caption right-align">
           <h3>Right Aligned Caption</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
@@ -29,35 +29,79 @@
 <div class="row section about">
 		<section id="about">
 			<center>
-				<h1> About us</h1>
+				<h1> Про нас</h1>
 			</center>
+			<div class="row">
+				<div class="col s8 offset-s2 grid-example">
+					<div class="card-panel">
+						<span class="grey-text text-darken-2">
+							Наш сервіс "Check Your Competence" надає можливість для перевірки власних знань та вмінь на великій базі даних тестів та задач. База розміщує у собі великий обсяг різноманітних завдань, які були розподілені на наступні категорії:
+							<blockquote>
+								<li>Тести на логіку</li>
+								<li>Тести на знання мов програмування</li>
+								<li>Вправи на перевірку знань ООП</li>
+								<li>Оцінка навичок IT-спеціаліста</li>
+							</blockquote>
+							З часом, можливості нашої системи будуть розширюватися. Слідкуйте за оновленнями!
+						</span>
+					</div>
+				</div>
+			</div>	
 		</section>
 </div>
-<div class="row section sign">
-		<section id="sign">
-				<center>
-					<h1> Sign up </h1>
-					<%= link_to("Sign up",signup_path,class: "waves-effect waves-light btn") %>
-				</center>
 
-				
+<div class="row section about">
+		<section id="companies">
+			<center>
+				<h1>Для компаній</h1>
+			</center>
+			<div class="row">
+				<div class="col s8 offset-s2 grid-example">
+					<div class="card-panel">
+
+						<div class="card-content">
+							<span class="grey-text text-darken-2">
+								Ми маємо декілька пропозицій для корпоративних клієнтів: 
+								<blockquote>
+									<li>Тестування майбутніх співробітників</li>
+									<li>Завантаження власної бази завдань</li>
+									<li>Зберігання резюме кожного робітника</li>
+								</blockquote>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>	
 		</section>
 </div>
+
 <div class="row section stat">
 	<section id="stat">
 			<center>
-				<h1> Statistics </h1>
+				<h1> Статистика відвідувань </h1>
 				<%= image_tag("diagr_1.png")%>
 				<%= image_tag("diagr_2.png")%>
 			</center>
 	</section>
+
+<div class="row section sign">
+		<section id="sign">
+				<center>
+					<h1> Реєстрація </h1>
+					<%= link_to("Зареєструватися!",signup_path,class: "waves-effect waves-light btn") %>
+					<%= link_to("Реєстрація компанії",companiessignup_path,class: "waves-effect waves-light btn") %>
+				</center>	
+		</section>
+</div>
+
 </div>
 <div class="row section contacts">
 	<section id="contacts">
 			<center>
-				<h1> Contact us </h1>
+				<h1> Зв'яжіться з нами </h1>
 			</center>
 		</section>
 	<center>
 </div>
+
 <%= render("layouts/footer_home") %>

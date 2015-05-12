@@ -1,0 +1,10 @@
+<% if @company.errors.any? %>
+    <div id="error_explanation">
+        <div class="alert alert-error">
+                        Наявні помилки <%= pluralize(@company.errors.count, "error") %>.
+                      </div>
+                      <% @company.errors.full_messages.each do |msg| %>
+                      <li> <%= msg %></li>
+                <% end %>
+    </div>
+  <% end %>
