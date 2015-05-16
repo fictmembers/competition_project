@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 	def new
 	end
 	def create 
-		if params[:session][:is_firm] != 1
+		if params[:session][:is_firm] != '1'
     		user = User.find_by(email: params[:session][:email].downcase)
     		if user && user.authenticate(params[:session][:password])
       			sign_in(user)
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     	else
     		company = Company.find_by(email: params[:session][:email].downcase)
     		if company && company.authenticate(params[:session][:password])
-      			sign_in(company)
+      			sign_in_company(company)
      			redirect_to(company)
     		else
       			render 'new'
