@@ -1,27 +1,28 @@
 <% provide(:title, "Home") %>
 <%= javascript_include_tag "custom", "data-turbolinks-track" => true %>
 <%= render 'layouts/header_home' %>
- <div class="slider row section">
+ 
+ <div class="row slider">
     <ul class="slides">
       <li>
-        <%= image_tag("https://s3.amazonaws.com/StartupStockPhotos/20140808_StartupStockPhotos/105.jpg") %>
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <img src="desk_1.png" />
+        <div class="caption left-align">
+          <h3>Check your competence!</h3>
+          <h5 class="light grey-text text-lighten-3">Оцінка базових та професіональних компетенцій співробітників.</h5>
         </div>
       </li>
       <li>
         <%= image_tag("carousel_2.jpg") %>
         <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Оцінка у реальному часі</h3>
+          <h5 class="light grey-text text-lighten-3">Проходячи наші завдання ви оцінюєте свої можливості саме зараз.</h5>
         </div>
       </li>
       <li>
         <%= image_tag("carousel_3.jpg") %>
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <div class="caption left-align">
+          <h3>Smart система</h3>
+          <h5 class="light grey-text text-lighten-3">Здатність детально оцінити на що ви спроможні та побудувати подальший шлях розвитку.</h5>
         </div>
       </li>
     </ul>
@@ -32,7 +33,7 @@
 				<h1> Про нас</h1>
 			</center>
 			<div class="row">
-				<div class="col s8 offset-s2 grid-example">
+				<div class="col s8 offset-s2">
 					<div class="card-panel">
 						<span class="grey-text text-darken-2">
 							Наш сервіс "Check Your Competence" надає можливість для перевірки власних знань та вмінь на великій базі даних тестів та задач. База розміщує у собі великий обсяг різноманітних завдань, які були розподілені на наступні категорії:
@@ -56,7 +57,7 @@
 				<h1>Для компаній</h1>
 			</center>
 			<div class="row">
-				<div class="col s8 offset-s2 grid-example">
+				<div class="col s8 offset-s2">
 					<div class="card-panel">
 
 						<div class="card-content">
@@ -149,8 +150,8 @@
 		<section id="sign">
 				<center>
 					<h1> Реєстрація </h1>
-					<%= link_to("Зареєструватися!",signup_path,class: "waves-effect waves-light btn") %>
-					<%= link_to("Реєстрація компанії",companiessignup_path,class: "waves-effect waves-light btn") %>
+					<%= link_to("Зареєструватися!",signup_path,class: "waves-effect waves-light btn-large") %>
+					<%= link_to("Реєстрація компанії",companiessignup_path,class: "waves-effect waves-light btn-large") %>
 				</center>	
 		</section>
 </div>

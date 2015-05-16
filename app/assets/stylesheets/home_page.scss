@@ -10,3 +10,15 @@
         background-color: black;
     }
 }
+$standartGray: #9E9E9E;
+$cyanDark: #006064;
+
+.slider .indicators .indicator-item
+{
+	background-color: $standartGray;
+}
+
+blockquote 
+{
+	border-color: $cyanDark;
+}

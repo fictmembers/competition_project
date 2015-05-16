@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.slider').slider({full_width: true});
+    $('.slider').slider();
         $("#nav-mobile").on("click", "a", function (event)    //обработка якорей
             {
                 if ($(this).attr('class') != 'sign-in') {

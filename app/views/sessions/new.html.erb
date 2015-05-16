@@ -1,8 +1,10 @@
 <% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
 
 <div class="row">
-  <div class="col s6 card white offset-s3">
+  <div class="col s6 card-panel white offset-s3">
+      <div class="card-title">
+            <h5> Вхід </h5>
+      </div>
     <%= form_for(:session, url: sessions_path) do |f| %> <!-- session_path - post(create) -->
 
       <%= f.label :email %>
@@ -11,11 +13,11 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-      <%= check_box_tag :is_firm %>
-      <%= label_tag :is_firm,true %>
+      <%= f.submit "Увійти", class: "btn btn-large btn-primary" %>
+      <%= f.check_box :is_firm %>
+      <%= f.label :is_firm,"Фірма?" %>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p>Ще не реєструвались?  <%= link_to "Зареєструватися!", signup_path %></p>
   </div>
 </div>

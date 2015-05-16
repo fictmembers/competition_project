@@ -10,7 +10,7 @@ class CompaniesController < ApplicationController
   def create
   	@company = Company.new(company_params)
   	if @company.save
-      sign_in_company (@company)
+      sign_in (@company)
   		redirect_to @company
   	else 
   		render 'new'

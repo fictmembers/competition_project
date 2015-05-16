@@ -1,10 +1,19 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <nav class="col s4 cyan darken-3 left-navbar">
-    <section>
-      <h1>
+  <nav class="col s2 cyan darken-3 left-navbar">
+  	<div class="row">
+  	  <%= image_tag("male.png",class: "circle responsive-img") %>
+  	</div>
+      <h4 class="center-align">
         <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+      </h2>
+      <div class="items-content">
+      <ul>
+      	<li><%= link_to "Мій профіль","#"%></li><br>
+      	<li><%= link_to "Пробне тестування","#"%></li><br>
+      	<li><%= link_to "Моя статистика","#"%></li><br>
+      	<li><%= link_to "Оцінка компетенцій","#",class: "check-button"%></li><br>
+      </ul>
+      </div>
+    </nav>
 </div>
