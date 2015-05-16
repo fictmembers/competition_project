@@ -1,0 +1,31 @@
+<ul id="users" class="dropdown-content">
+  <li> <a href="#!"> Перегляд усіх      </a> </li>
+  <li> <a href="#!"> Пошук              </a> </li>
+</ul>
+
+<ul id="information" class="dropdown-content">
+  <li> <a href="#!"> Перегляд           </a> </li>
+  <li> <a href="#!"> Редагування        </a> </li>
+</ul>
+
+<ul id="tests" class="dropdown-content">
+  <li> <a href="#!"> Перегляд               </a> </li>
+  <li> <a href="#!"> Редагування            </a> </li>
+  <li> <a href="#!"> Додати тест            </a> </li>
+  <li class="divider"></li> 
+  <li> <a href="#!"> Завантаження власної БД</a> </li>
+</ul>
+
+<nav class="head nav col s12 cyan darken-3">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo"><%= image_tag("cmc_1.png") %></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        <li><a class="dropdown-button" href="#!" data-activates="users">Користувачі<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="information">Сторінка компанії<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="tests">Тестування<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+
+        <li><%= link_to("Вихід",signout_path,method: 'delete',class: "sign-in") %></li>
+      </ul>
+  </div>
+</nav>
