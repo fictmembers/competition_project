@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $('.slider').slider({full_width: true});
+     $('.slider').slider({full_width: true});
+    $('.dropdown-button').dropdown();
+
         $("#nav-mobile").on("click", "a", function (event)    //обработка якорей
             {
                 if ($(this).attr('class') != 'sign-in') {
