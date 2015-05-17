@@ -15,10 +15,13 @@ $cyanDark: #006064;
 
 .slider .indicators .indicator-item
 {
-	background-color: $standartGray;
+	-color: $standartGray; 
+	opacity: 0.5; 
 }
 
 blockquote 
 {
 	border-color: $cyanDark;
+	
 }
+
