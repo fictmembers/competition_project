@@ -1,0 +1,30 @@
+<% provide(:title, 'Change Company data') %>
+
+<div class="row section about">
+		<div class="col s6 offset-s3">
+			<div class="card-panel">
+					<div class="card-title">
+						<h5> Зміни у компанії</h5>
+					</div>
+					<%= form_for(@company) do |t| %>
+					<%= render 'shared/error_messages_companies' %>
+					<%= t.label :name, "Змінити назву компанії" %>
+					<%= t.text_field :name %>
+
+					<%= t.label :manager, "Змінити ім’я менеджера"%>
+					<%= t.text_field :manager %>
+
+					<%= t.label :email %>
+					<%= t.text_field :email %>
+
+					<%= t.label :password, "Змінити пароль" %>
+					<%= t.password_field :password %>
+
+					<%= t.label :password_confirmation, "Підтвердження паролю" %>
+					<%= t.password_field :password_confirmation %>
+
+					<%= t.submit "Зберегти зміни профілю", class: "btn btn-large btn-primary"%>
+				<% end %>
+			</div>
+		</div>
+</div>
