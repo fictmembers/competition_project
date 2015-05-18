@@ -5,12 +5,12 @@
 
 <ul id="information" class="dropdown-content">
   <li> <a href="#!"> Перегляд           </a> </li>
-  <li> <a href="#!"> Редагування        </a> </li>
+  <li> <%= link_to "Редагування",edit_company_path(current_company) %> </li>
 </ul>
 
 <ul id="tests" class="dropdown-content">
   <li> <a href="#!"> Перегляд               </a> </li>
-  <li> <a href="#!"> Редагування            </a> </li>
+  <li> <%= link_to "Редагування","#" %></li>
   <li> <%= link_to "Додати тест",createtest_path %> </li>
   <li class="divider"></li> 
   <li> <a href="#!"> Завантаження власної БД</a> </li>
