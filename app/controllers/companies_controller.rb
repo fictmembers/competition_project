@@ -3,6 +3,10 @@ class CompaniesController < ApplicationController
   	@company = Company.find(params[:id]) 
   end
 
+  def index
+    @companies = Company.paginate(page: params[:page])
+  end
+
   def new
   	@company = Company.new()
   end
