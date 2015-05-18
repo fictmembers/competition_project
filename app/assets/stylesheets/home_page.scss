@@ -12,15 +12,27 @@
 }
 $standartGray: #436363;
 $cyanDark: #006064;
+$darkMint: #004d40;
 
 .slider .indicators .indicator-item
 {
-	-color: $standartGray; 	
+	-color: $standartGray;
 }
 
-blockquote 
+blockquote
 {
 	border-color: $cyanDark;
-	
 }
 
+.button
+{
+
+  margin: auto auto 20% 28%;
+}
+
+.mdi-action-perm-contact-cal , .mdi-social-domain
+{
+  color: $darkMint;
+  font-size: 140px;
+  margin: auto 35% -7%;
+}

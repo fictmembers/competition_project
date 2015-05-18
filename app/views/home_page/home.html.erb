@@ -2,19 +2,19 @@
 <%= javascript_include_tag "custom", "data-turbolinks-track" => true %>
 <%= render 'layouts/header_home' %>
 
- <div class="row slider" style="background: url(desk_1.png) repeat-y #fc0; ">
-    <ul class="slides">  
+ <div class="row slider">
+    <ul class="slides">
 
- <li class="active" style="opacity: 1; transform: translateX(0px) translateY(0px); background-image: url(assets/carousel_1.jpg);">         
+ <li class="active" style="opacity: 1; transform: translateX(0px) translateY(0px); background-image: url(assets/carousel_1.jpg);">
           <div class="caption left-align">
           <h3 style="-webkit-text-stroke: 1px black; font-size:65pt;">Check your competence!</h3>
           <h5 class="light grey-text text-lighten-3" style=" font: inherit; font-size:24pt; -webkit-text-stroke: 0.5px black;">Оцінка базових та професіональних компетенцій співробітників. </h5>
-         </div>      
-      </li>   
+         </div>
+      </li>
 
-<li  class="active" style="opacity: 1; transform: translateX(0px) translateY(0px); background-image: url(assets/carousel_2.jpg);   background-size: cover;"> 
-         <div class="caption left-align">       
-          <h3 style="-webkit-text-stroke: 1px black; font-size:65pt;">Оцінка у реальному часі</h3>      
+<li class="active" style="opacity: 1; transform: translateX(0px) translateY(0px); background-image: url(assets/carousel_2.jpg);   background-size: cover;">
+         <div class="caption left-align">
+          <h3 style="-webkit-text-stroke: 1px black; font-size:65pt;">Оцінка у реальному часі</h3>
           <h5 class="light grey-text text-lighten-3" style=" font: inherit; font-size:24pt; -webkit-text-stroke: 0.5px black;">Проходячи наші завдання ви оцінюєте свої можливості саме зараз.</h5>
         </div>
       </li>
@@ -25,16 +25,12 @@
           <h5 class="light grey-text text-lighten-3" style=" font: inherit; font-size:24pt; -webkit-text-stroke: 0.5px black;">Здатність детально оцінити на що ви спроможні та побудувати подальший шлях розвитку.</h5>
         </div>
       </li>
-      
-      
-
-     
     </ul>
   </div>
 
 <div class="row section about">
 		<section id="about">
-			<center>       
+			<center>
 				<h1> Про нас</h1>
 			</center>
 			<div class="row">
@@ -52,7 +48,7 @@
 						</span>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</section>
 </div>
 
@@ -67,7 +63,7 @@
 
 						<div class="card-content">
 							<span class="grey-text text-darken-2">
-								Ми маємо декілька пропозицій для корпоративних клієнтів: 
+								Ми маємо декілька пропозицій для корпоративних клієнтів:
 								<blockquote>
 									<li>Тестування майбутніх співробітників</li>
 									<li>Завантаження власної бази завдань</li>
@@ -77,7 +73,7 @@
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</section>
 </div>
 
@@ -94,7 +90,7 @@
               <%= image_tag("rad.png") %>
               	<span class="card-title">
               		<div class="card-content black-text">Загальні результати </div>
-              	</span>  
+              	</span>
             </div>
             <div class="card-action">
               <p>Результати тестування користувачів за період експлуатації сервісу</p>
@@ -108,7 +104,7 @@
               <%= image_tag("pos.png") %>
               	<span class="card-title">
               		<div class="card-content black-text">Статистика реєстрації користувачів</div>
-              	</span>  
+              	</span>
             </div>
             <div class="card-action">
               <p>Загальні результати наших користувачів на проміжку з березня по травень</p>
@@ -125,7 +121,7 @@
               <%= image_tag("sex.png") %>
               	<span class="card-title">
               		<div class="card-content black-text">Розподіл за статтю</div>
-              	</span>  
+              	</span>
             </div>
             <div class="card-action">
               <p>Розподіл зареєстрованих користувачів за статтю</p>
@@ -139,7 +135,7 @@
               <%= image_tag("vik.png") %>
               	<span class="card-title">
               		<div class="card-content black-text">Розподіл за віком</div>
-              	</span>  
+              	</span>
             </div>
             <div class="card-action">
               <p>Розподіл зареєстрованих користувачів за віком</p>
@@ -151,15 +147,57 @@
 </section>
 </div>
 
+
+
+
 <div class="row section sign">
-		<section id="sign">
-				<center>
-					<h1> Реєстрація </h1>
-					<%= link_to("Зареєструватися!",signup_path,class: "waves-effect waves-light btn-large") %>
-					<%= link_to("Реєстрація компанії",companiessignup_path,class: "waves-effect waves-light btn-large") %>
-				</center>	
-		</section>
+<section id="sign">
+	<center>
+		<h1>Реєстрація</h1>
+	</center>
+<div class="row">
+
+        <div class="col s4 offset-s2">
+          <div class="card">
+            <i class="mdi-action-perm-contact-cal"></i>
+            <span class="card-title">
+              <div class="card-content black-text">
+                <center>
+              Якщо ви ще не зареєстрований користувач - долучайтеся до нашої системи!
+              </center>
+                </div>
+            </span>
+            <div class="button">
+            <%= link_to("Зареєструватися!",signup_path,class: "waves-effect waves-light btn-large ") %>
+           </div>
+
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="card ">
+            <i class="mdi-social-domain"></i>
+            <span class="card-title">
+              <div class="card-content black-text">
+                <center>
+              Якщо Ваша компанія зацікавлена у використанні нашої системи, ми неодмінно вам допоможемо!
+              </center>
+                </div>
+              </span>
+            <div class="button">
+              <%= link_to("Реєстрація компанії",companiessignup_path,class: "waves-effect waves-light btn-large") %>
+           </div>
+          </div>
+        </div>
 </div>
+
+
+</section>
+</div>
+
+
+
+
 
 <div class="row section contacts">
 	<section id="contacts">
