@@ -11,10 +11,15 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   end
 
+  def testmessage
+    @user = User.find(params[:id])
+    Messager.sample_email(@user)
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
-      Messager.sample_email(@user)
+      Messager.sample_email(@user).deliver
       sign_in(@user)
       flash[:success] = "Welcome to the app"
       redirect_to @user
