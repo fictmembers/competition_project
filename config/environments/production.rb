@@ -77,4 +77,17 @@ CompetitionProject::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Setting up mailer
+  config.action_mailer.delivery_method = :smtp
+
+  # Settings for gmail
+  config.action_mailer.smtp_settings = {
+    :adress                => "smtp.gmail.com"
+    :port                  => 587
+    :user_name             => ENV['gmail_username']
+    :password              => ENV['gmial_password']
+    :authentication        => "plain"
+    :enable_starttls_auto  => true
+  }
 end

@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      Messager.sample_email(@user)
       sign_in(@user)
       flash[:success] = "Welcome to the app"
       redirect_to @user
