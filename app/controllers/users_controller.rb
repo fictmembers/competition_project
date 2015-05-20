@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @invite = Promocode.all
   end
 
   def create
