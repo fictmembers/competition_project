@@ -7,22 +7,32 @@
 						<h5> Реєстрація нової компанії</h5>
 					</div>
 					<%= form_for(@company) do |t| %>
-					<%= render 'shared/error_messages_companies' %>
-					<%= t.label :name, "Назва компанії" %>
-					<%= t.text_field :name %>
+						<%= render 'shared/error_messages_companies' %>
 
-					<%= t.label :manager, "Менеджер HR"%>
-					<%= t.text_field :manager %>
+						<div>
+							<%= t.label :name, "Назва компанії" %>
+							<%= t.text_field :name %>
+						</div>
 
-					<%= t.label :email %>
-					<%= t.text_field :email %>
+						<div>
+							<%= t.label :manager, "Менеджер HR"%>
+							<%= t.text_field :manager %>
+						</div>
 
-					<%= t.label :password, "Пароль" %>
-					<%= t.password_field :password %>
+						<div>
+							<%= t.label :email %>
+							<%= t.text_field :email %>
+						</div>
 
-					<%= t.label :password_confirmation, "Підтвердження паролю" %>
-					<%= t.password_field :password_confirmation %>
+						<div>
+							<%= t.label :password, "Пароль" %>
+							<%= t.password_field :password %>
+						<div>
 
+						<div>
+							<%= t.label :password_confirmation, "Підтвердження паролю" %>
+							<%= t.password_field :password_confirmation %>
+						</div>
 					<%= t.submit "Завершити реестрацію", class: "btn btn-large btn-primary"%>
 				<% end %>
 			</div>

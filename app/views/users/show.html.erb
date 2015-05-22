@@ -17,4 +17,24 @@
       </ul>
       </div>
     </nav>
+
+    <div class="col s10">
+      <ul class="collection with-header">
+        <li class="collection-header"> Запрошення: </li> 
+
+        <% @invite.each do |inv| %>
+          <li class="collection-item">
+            <div>
+              <span class="grey-text text-darken-3">
+                      Завдання: <%= inv.task %> <%= inv.text %>
+              </span>
+                    <a href="#!" class="secondary-content">
+                <%= image_tag("message.png", size: '20') %>
+              </a>
+            </div>
+          </li>
+        <% end %>
+
+      </ul>
+    </div>
 </div>

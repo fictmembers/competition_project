@@ -1,0 +1,32 @@
+<% provide(:title, 'New Invite') %>
+<%= render 'shared/header_index' %>
+
+<div class="row">
+	<div class="col s4 offset-s4">
+		<div class="card">
+			<div class="card-content">
+				<span class="card-title black-text"> Нове запрошення: </span>
+					<%= form_for(@promo) do |f| %>
+						<%= render 'shared/error_messages_invite' %>
+						<div>
+							<%= f.label :recipient, "Кому:" %>
+							<%= f.text_field :recipient, required: true %>
+						</div>
+
+						<div>
+							<%= f.label :task, "Код запрошення:" %>
+							<%= f.text_field :task, required: true %>
+						</div>
+
+						<div>
+							<%= f.text_area :text, rows: 10, cols: 25, required: true %>
+						</div>
+
+						<center>
+							<%= f.submit "Відправити", class: "btn btn-lage btn-primary" %>
+						</center>
+					<% end %>
+			</div>
+		</div>
+	</div>
+</div>

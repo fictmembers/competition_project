@@ -7,18 +7,26 @@
     </div>
     <%= form_for(@user) do |f| %>
 	<%= render 'shared/error_messages_user' %> <!-- Rendering error messages -->
+    <div>
       <%= f.label :name, "Ім’я" %>
       <%= f.text_field :name %>
+    </div>
 
+    <div>
       <%= f.label :email %>
       <%= f.text_field :email %>
+    </div>
 
+    <div>
       <%= f.label :password,"Пароль" %>
       <%= f.password_field :password %>
+    </div>
 
+    <div>
       <%= f.label :password_confirmation, "Підтвердження паролю" %>
       <%= f.password_field :password_confirmation %>
-
+    </div>
+    
        <%= f.submit "Зареєструватися", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>

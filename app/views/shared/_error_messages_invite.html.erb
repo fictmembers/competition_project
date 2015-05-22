@@ -1,0 +1,13 @@
+<% if @promo.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      Нажаль виникли пломилки: 
+      <%= pluralize(@promo.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @promo.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
