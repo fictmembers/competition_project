@@ -4,7 +4,7 @@ class PromocodesController < ApplicationController
   end
 
   def show
-  	@user_task = Promocode.find_by(:task)
+  	@promo = Promocode.find_by(:task)
   end
 
   def create
@@ -18,6 +18,6 @@ class PromocodesController < ApplicationController
 
   private
   def promo_require
-  	params.require(:promocode).permit(:text, :recipient, :task)
+  	params.require(:promocode).permit(:text, :task, :id_foreign, :recipient)
   end
 end
