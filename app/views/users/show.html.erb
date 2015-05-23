@@ -21,19 +21,21 @@
     <div class="col s10">
       <ul class="collection with-header">
         <li class="collection-header"> Запрошення: </li> 
-
-        <% @invite.each do |inv| %>
-          <li class="collection-item">
-            <div>
-              <span class="grey-text text-darken-3">
-                      Завдання: <%= inv.task %> <%= inv.text %> <%= inv.id_foreign %>
-              </span>
+        <% if @invite != nil %>
+          <% @invite.each do |inv| %>
+            <li class="collection-item">
+              <div>
+                <span class="grey-text text-darken-3">
+                      Завдання: <%= inv.task %> <%= inv.text %> <%= inv.mailed_to %>
+                </span>
                     <a href="#!" class="secondary-content">
-                <%= image_tag("message.png", size: '20') %>
-              </a>
-            </div>
-          </li>
+                      <%= image_tag("message.png", size: '20') %>
+                    </a>
+              </div>
+            </li>
+          <% end %>
         <% end %>
+
 
       </ul>
     </div>

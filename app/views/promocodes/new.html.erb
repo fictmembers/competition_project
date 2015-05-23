@@ -15,8 +15,7 @@
 						</div>
 
 						<div>
-							<%= f.label :foreign_id, "Кому:" %> </br>
-							<%= select_tag :foreign_id, recipients_options, multiple: false, required: true %>
+							<%= f.select  :mailed_to, recipients_options, class: "select" %>
 						</div>
 
 						<div>

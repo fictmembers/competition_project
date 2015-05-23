@@ -1,6 +1,4 @@
 class User < ActiveRecord::Base
-	has_many :promocodes
-
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
 	before_save{email.downcase!}

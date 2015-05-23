@@ -16,8 +16,12 @@ class PromocodesController < ApplicationController
   	end
   end
 
+  def update
+    
+  end
+
   private
   def promo_require
-  	params.require(:promocode).permit(:text, :task, :id_foreign, :recipient)
+  	params.require(:promocode).permit(:text, :task, :mailed_to, :recipient)
   end
 end
