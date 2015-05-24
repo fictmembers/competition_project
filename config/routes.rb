@@ -6,13 +6,16 @@ CompetitionProject::Application.routes.draw do
   resources :tests
 
   root "home_page#home"
-  match '/newinvite',       to: 'promocodes#new' ,  via: 'get' 
-  match '/company_home',    to: 'companies#show' ,  via: 'get'
-  match '/signup',          to: 'users#new' ,       via: 'get'
-  match '/signin',          to: 'sessions#new' ,    via: 'get'
-  match '/signout',         to: 'sessions#destroy', via: 'delete'
-  match '/companiessignup', to: 'companies#new' ,   via: 'get'
-  match '/createtest',      to: 'tests#new',        via: 'get'
+  match '/foundedtest',     to: 'shared#founded_test',     via: 'get'
+  match '/notfoundedtest',  to: 'shared#not_founded_test', via: 'get'
+  match '/starttest',       to: 'promocodes#show',         via: 'get'
+  match '/newinvite',       to: 'promocodes#new' ,         via: 'get' 
+  match '/company_home',    to: 'companies#show' ,         via: 'get'
+  match '/signup',          to: 'users#new' ,              via: 'get'
+  match '/signin',          to: 'sessions#new' ,           via: 'get'
+  match '/signout',         to: 'sessions#destroy',        via: 'delete'
+  match '/companiessignup', to: 'companies#new' ,          via: 'get'
+  match '/createtest',      to: 'tests#new',               via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

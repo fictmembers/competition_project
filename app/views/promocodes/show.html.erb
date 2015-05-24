@@ -5,18 +5,18 @@
 	<div class="col s4 offset-s4">
 		<div class="card">
 			<div class="card-image">
-            <%= image_tag("Exams.jpg", class: "responsive-img")%>
+            <%= image_tag("exams/#{rand(5)}.jpg")%>
             <span class="card-title">Час тестуватися!</span>       
             </div>
             <div class="card-content">
            	
-            	<label for="first_name">Ключ до тесту:</label>
-				<input placeholder="Промокод" id="task" type="text" class="validate">
-  					<button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    					<i class="mdi-content-send right"></i>
-  					</button>
+                  <%= form_for(:autcode,  url: promocodes_path) do |f| %> 
+                    <!-- session_path - post(create) -->
+                    <%= f.label :code, "Код доступу" %>
+                    <%= f.text_field :code, placeholder: "Промокод" %>
 
-  					
+                    <%= f.submit "Розпочати!", class: "btn btn-primary" %>
+                  <% end %>  					
             </div>
 		</div>
 	</div>

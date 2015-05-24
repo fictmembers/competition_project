@@ -9,12 +9,13 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
-    @invite = Promocode.where(mailed_to: @user.id)
+    @invite = Promocode.where(recipient: @user.id)
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
+#      Messager.sample_email(@user).deliver           // DON'T TOUCH!!!
       sign_in(@user)
       flash[:success] = "Welcome to the app"
       redirect_to @user

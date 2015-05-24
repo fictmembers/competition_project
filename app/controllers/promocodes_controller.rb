@@ -4,13 +4,20 @@ class PromocodesController < ApplicationController
   end
 
   def show
-  	@promo = Promocode.find_by(:task)
+    input = params[:autcode][:code] unless params[:autcode].nil?
+  	@promo = Promocode.where(task: input)
+
+    if @promo != nil
+      render 'show'
+    else
+      render 'show'
+    end
   end
 
   def create
   	@promo = Promocode.new(promo_require)
   	if @promo.save
-  		render 'new'
+  		redirect_to current_company
   	else
   		render 'new'
   	end
@@ -22,6 +29,6 @@ class PromocodesController < ApplicationController
 
   private
   def promo_require
-  	params.require(:promocode).permit(:text, :task, :mailed_to, :recipient)
+  	params.require(:promocode).permit(:text, :task, :recipient)
   end
 end
