@@ -8,9 +8,14 @@
 				<span class="card-title black-text"> Нове запрошення: </span>
 					<%= form_for(@promo) do |f| %>
 						<%= render 'shared/error_messages_invite' %>
+
 						<div>
-							<%= f.label :recipient, "Кому:" %>
+							<%= f.label :recipient, "Адресат:" %> </br>
 							<%= f.text_field :recipient, required: true %>
+						</div>
+
+						<div>
+							<%= f.select  :mailed_to, recipients_options, class: "select" %>
 						</div>
 
 						<div>

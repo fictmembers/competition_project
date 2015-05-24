@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.1.4'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails','4.0.2'
@@ -8,6 +8,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 #Bootstrap and custom css
 gem 'materialize-sass'
 gem 'sqlite3' , '1.3.8'
+gem 'sqlserver-foreigner'
 gem 'sass-rails'
 gem 'bcrypt-ruby', '3.1.2'
 

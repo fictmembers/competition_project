@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
-    @invite = Promocode.all
+    @invite = Promocode.where(mailed_to: @user.id)
   end
 
   def create
