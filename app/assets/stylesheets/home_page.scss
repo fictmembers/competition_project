@@ -2,17 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$standartGray: #436363;
+$cyanDark: #006064;
+$darkMint: #004d40;
+$cayanLight: #00838F;
 .sign-in
 {
-    background-color: #006064;
+    background-color: $cyanDark;
     &:hover
     {
         background-color: black;
     }
 }
-$standartGray: #436363;
-$cyanDark: #006064;
-$darkMint: #004d40;
+
+.user-sign-in
+{
+  background-color: $cayanLight;
+  &:hover
+  {
+      background-color: #007580;
+  }
+}
 
 .slider .indicators .indicator-item
 {
