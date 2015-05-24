@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   before_action :signed_in_company, only: [:edit,:update]
   before_action :correct_company,   only: [:edit, :update]
   def show
-  	@company = Company.find(params[:id]) 
+  	@company = Company.find(params[:id])
   end
 
   def index
@@ -30,7 +30,7 @@ class CompaniesController < ApplicationController
   	if @company.save
       sign_in_company @company
   		redirect_to @company
-  	else 
+  	else
   		render 'new'
   	end
   end

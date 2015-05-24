@@ -8,7 +8,17 @@ head,body
 }
 .left-navbar
 {
-	height: 1000px;
+	height: auto;
+}
+
+.responsive-img
+{
+ margin-top: 10%;
+}
+
+.mdi-toggle-check-box, .mdi-action-account-balance, .mdi-action-trending-up
+{
+	font-size: 160px;
 }
 
 .items-content
