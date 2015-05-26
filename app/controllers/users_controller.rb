@@ -12,6 +12,18 @@ class UsersController < ApplicationController
     @invite = Promocode.where(recipient: @user.id)
   end
 
+  def code
+  end
+
+  def check_code
+    user_codes = Promocode.find_by(recipient: current_user.id)
+      if user_codes.task == params[:code]
+        redirect_to current_user
+      else
+        redirect_to enter_code_url
+      end
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
