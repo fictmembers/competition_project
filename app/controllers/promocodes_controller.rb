@@ -5,6 +5,7 @@ class PromocodesController < ApplicationController
 
   def create
   	@promo = Promocode.new(promo_require)
+    @promo.company_id = current_company.name
   	if @promo.save
   		redirect_to current_company
   	else

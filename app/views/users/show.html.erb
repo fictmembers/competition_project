@@ -59,18 +59,15 @@
 
     <ul class="collection with-header">
       <li class="collection-header"> Запрошення: </li>
-
       <% @invite.each do |inv| %>
-        <li class="collection-item">
-          <div>
-            <span class="grey-text text-darken-3">
-                    Завдання: <%= inv.task %> <%= inv.text %>
-            </span>
-                  <%= link_to(image_tag("message.png", size: '20'),enter_code_path,class: "secondary-content")%>
-          </div>
-        </li>
+          <li class="collection-item avatar">
+            <span class="title">Від: <%= inv.company_id %></span>
+            <p>Ключ: <%= inv.task %><br>
+               <%= inv.text %>
+            </p>
+            <%= link_to(image_tag("message.png", size: '40'),enter_code_path,class: "secondary-content")%>
+          </li>
       <% end %>
     </ul>
-
     </div>
 </div>
