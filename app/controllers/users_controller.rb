@@ -18,10 +18,14 @@ class UsersController < ApplicationController
   def check_code
     user_codes = Promocode.find_by(recipient: current_user.id)
       if user_codes.task == params[:code]
-        redirect_to current_user
+        redirect_to companytest_url
       else
         redirect_to enter_code_url
       end
+  end
+
+  def company_test
+    @tests = Test.limit(5)
   end
 
   def create

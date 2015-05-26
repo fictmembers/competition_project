@@ -1,0 +1,11 @@
+<div class="row">
+<% @tests.each do |t| %>
+<div class="card">
+<%= t.question %>
+<%= radio_button_tag(:right_answer, "1") %>
+<%= radio_button_tag(:right_answer, "2") %>
+<%= radio_button_tag(:right_answer, "3") %>
+<%= radio_button_tag(:right_answer, "4") %>
+</div>
+<% end %>
+</div>
