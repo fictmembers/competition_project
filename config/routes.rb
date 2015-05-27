@@ -13,6 +13,7 @@ CompetitionProject::Application.routes.draw do
   match '/companiessignup', to: 'companies#new' ,          via: 'get'
 
   match '/companies/:id',    to: 'companies#show' ,         via: 'get'
+  match '/users/:id',    to: 'users#show' ,         via: 'get'
   match '/createtest',      to: 'tests#new',               via: 'get'
 
   match '/newinvite',       to: 'promocodes#new' ,         via: 'get'
