@@ -12,7 +12,7 @@
   <li> <a href="#!"> Перегляд               </a> </li>
   <li> <%= link_to "Редагування","#" %></li>
   <li> <%= link_to "Додати тест",createtest_path %> </li>
-  <li class="divider"></li> 
+  <li class="divider"></li>
   <li> <a href="#!"> Завантаження власної БД</a> </li>
 </ul>
 
@@ -24,7 +24,7 @@
         <li><a class="dropdown-button" href="#!" data-activates="users">Користувачі<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
         <li><a class="dropdown-button" href="#!" data-activates="information">Сторінка компанії<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
         <li><a class="dropdown-button" href="#!" data-activates="tests">Тестування<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-
+        <li>  <%= link_to( "На головну",root_path, ) %></li>
         <li><%= link_to("Вихід",signout_path,method: 'delete',class: "sign-in") %></li>
       </ul>
   </div>
