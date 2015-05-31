@@ -12,10 +12,11 @@
                 			<%= user.name %>
                 		</span>
 
-                		<a href="/promocodes/new" class="secondary-content">
-                			<%= image_tag("message.png", size: '15') %>
+                        <% if current_company_exist? %>
+                            <a href="/promocodes/new" class="secondary-content">
+                            <%= image_tag("message.png", size: '15') %> </a>
+                        <% end %>
 
-                		</a>
                 	</div>
                 </li>
         <% end %>
