@@ -30,5 +30,7 @@
 			<%= f.submit "Завантажити у БД", class: "btn btn-large btn-primary" %>
 			<p> Будь-ласка,не забудьте відмітити правильний варіант відповіді! </p> <%= link_to("На сторінку компанії",current_company) %>
 		<% end %>
+		<%= link_to "До кабінету", company_path(current_company.id), class: "blue-text text-darken-2"%>
 	</div>
+
 </div>

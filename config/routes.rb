@@ -11,11 +11,12 @@ CompetitionProject::Application.routes.draw do
   match '/signin',          to: 'sessions#new' ,           via: 'get'
   match '/signout',         to: 'sessions#destroy',        via: 'delete'
   match '/companiessignup', to: 'companies#new' ,          via: 'get'
-  match '/company_home',    to: 'companies#show' ,         via: 'get'
 
+  match '/companies/:id',    to: 'companies#show' ,         via: 'get'
+  match '/users/:id',    to: 'users#show' ,         via: 'get'
   match '/createtest',      to: 'tests#new',               via: 'get'
 
-  match '/newinvite',       to: 'promocodes#new' ,         via: 'get' 
+  match '/newinvite',       to: 'promocodes#new' ,         via: 'get'
 
   match '/enter_code',      to: 'users#code',      via: 'get'
   match '/checkcode',      to: 'users#check_code',      via: 'post'

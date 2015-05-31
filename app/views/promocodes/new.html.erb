@@ -24,9 +24,10 @@
 						</div>
 
 						<center>
-							<%= f.submit "Відправити", class: "btn btn-lage btn-primary" %>
+							<%= f.submit "Відправити", class: "btn" %>
 						</center>
 					<% end %>
+					<%= link_to "До кабінету", company_path(current_company.id), class: "blue-text text-darken-2"%>
 			</div>
 		</div>
 	</div>
