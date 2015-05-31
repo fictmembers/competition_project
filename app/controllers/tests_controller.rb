@@ -1,15 +1,24 @@
 class TestsController < ApplicationController
   def new
-  	  @test = Test.new
+  	  @test = LogicalTest.new
   end
 
   def create
-  	@test = Test.new(test_params)
-  	if @test.save
-  		render 'new'
-  	else
+    if params[:database] == '1'
+    	@test = LogicalTest.new(test_params)
+    	if @test.save
+    		render 'new'
+    	else
 
-  	end
+    	end
+    elsif params[:database] == '2'
+      @test = KnowledgeTest.new(test_params)
+      if @test.save
+        render 'new'
+      else
+
+      end
+    end
   end
 
   private
