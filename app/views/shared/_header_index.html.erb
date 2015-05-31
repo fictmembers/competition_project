@@ -2,6 +2,12 @@
   <div class="nav-wrapper">
     <a href="#" class="brand-logo"><%= image_tag("cmc_1.png") %></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if current_company_exist? %>
+        <li><%= link_to("Особистий кабінет", company_path(current_company.id), class: "cabinet") %> </li>
+        <% end %>
+        <% if current_user_exist? %>
+        <li><%= link_to("Особистий кабінет", user_path(current_user.id), class: "cabinet") %> </li>
+        <% end %>
         <li><%= link_to("Вихід",signout_path,method: 'delete',class: "sign-in") %></li>
       </ul>
   </div>

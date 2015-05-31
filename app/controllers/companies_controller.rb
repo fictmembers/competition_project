@@ -35,6 +35,11 @@ class CompaniesController < ApplicationController
   	end
   end
 
+  def promocode
+    @company = Company.find(current_company.id)
+    @promocode_local = @company.promocodes
+  end
+
   private
 
   def company_params

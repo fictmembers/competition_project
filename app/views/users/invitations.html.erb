@@ -4,7 +4,7 @@
       <li class="collection-header"> Запрошення: </li>
       <% @invite.each do |inv| %>
           <li class="collection-item avatar">
-            <span class="title"><b> <%= inv.company_id %> </b> </span>
+            <span class="title"><b> <%= inv.company_sender %> </b> </span>
             <p>Ключ: <%= inv.task %><br>
                <%= inv.text %>
             </p>
