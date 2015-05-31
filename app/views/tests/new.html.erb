@@ -27,6 +27,11 @@
 			<%= f.label :answer4,"варіант відповіді" %>
 			<%= f.text_field :answer4 %>
 
+			<%= radio_button_tag(:database, "1") %>
+			<%= label_tag(:database_1,"Додати у логічні тести") %>
+			<%= radio_button_tag(:database, "2") %>
+			<%= label_tag(:database_2,"Додати у тести на перевірку знань") %> <br />
+
 			<%= f.submit "Завантажити у БД", class: "btn btn-large btn-primary" %>
 			<p> Будь-ласка,не забудьте відмітити правильний варіант відповіді! </p> <%= link_to("На сторінку компанії",current_company) %>
 		<% end %>

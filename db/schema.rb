@@ -26,6 +26,34 @@ ActiveRecord::Schema.define(version: 20150531120310) do
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true
   add_index "companies", ["remember_token"], name: "index_companies_on_remember_token"
 
+  create_table "internals_tests", force: true do |t|
+    t.string   "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "knowledge_tests", force: true do |t|
+    t.string   "question"
+    t.string   "answer1"
+    t.string   "answer2"
+    t.string   "answer3"
+    t.string   "answer4"
+    t.string   "right_answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "logical_tests", force: true do |t|
+    t.string   "question"
+    t.string   "answer1"
+    t.string   "answer2"
+    t.string   "answer3"
+    t.string   "answer4"
+    t.string   "right_answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "promocodes", force: true do |t|
     t.string   "text"
     t.string   "recipient"
