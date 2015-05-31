@@ -7,10 +7,19 @@
         <li><a href="#sign"> Реєстрація </a></li>
         <li><a href="#stat"> Статистика </a></li>
         <% if signed_in? %>
+
+        <% if current_company_exist? %>
+        <li><%= link_to("Особистий кабінет", company_path(current_company.id), class: "cabinet") %> </li>
+        <% end %>
+        <% if current_user_exist? %>
+        <li><%= link_to("Особистий кабінет", user_path(current_user.id), class: "cabinet") %> </li>
+        <% end %>
+
           <li><%= link_to("Вихід",signout_path,method: 'delete',class: "sign-in") %></li>
         <% else %>
           <li><%= link_to("Вхід",signin_path,class: "sign-in") %></li>
         <% end %>
+
       </ul>
     </div>
   </nav>

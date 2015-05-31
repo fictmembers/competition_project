@@ -2,25 +2,7 @@
 
 
 <div class="row">
-  <nav class="col s2 cyan darken-3 left-navbar">
-  	<div class="row">
-  	  <%= image_tag("male.png",class: "circle responsive-img") %>
-  	</div>
-      <h4 class="center-align">
-        <%= @user.name %>
-      </h2>
-      <div class="items-content">
-      <ul>
-      	<li><%= link_to "Мій профіль","#"%></li><br>
-      	<li><%= link_to "Пробне тестування","#"%></li><br>
-      	<li><%= link_to "Моя статистика","#"%></li><br>
-        <li><%= link_to "Усі користувачі", users_path %></li><br>
-      	<li><%= link_to "Оцінка компетенцій","#"%></li><br>
-        <li><%= link_to("Вихід",signout_path,method: 'delete',class: "user-sign-in") %></li>
-      </ul>
-      </div>
-    </nav>
-
+<%= render 'layouts/user_navbar' %>
     <div class="col s10">
       <div class="card white">
         <div class="card-content dark-text">
@@ -56,18 +38,5 @@
           </div>
       </div>
     </div>
-
-    <ul class="collection with-header">
-      <li class="collection-header"> Запрошення: </li>
-      <% @invite.each do |inv| %>
-          <li class="collection-item avatar">
-            <span class="title">Від: <%= inv.company_id %></span>
-            <p>Ключ: <%= inv.task %><br>
-               <%= inv.text %>
-            </p>
-            <%= link_to(image_tag("message.png", size: '40'),enter_code_path,class: "secondary-content")%>
-          </li>
-      <% end %>
-    </ul>
     </div>
 </div>

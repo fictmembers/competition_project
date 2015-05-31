@@ -1,0 +1,15 @@
+<div class="row">
+<%= render 'layouts/user_navbar' %>
+<ul class="collection with-header">
+      <li class="collection-header"> Запрошення: </li>
+      <% @invite.each do |inv| %>
+          <li class="collection-item avatar">
+            <span class="title"><b> <%= inv.company_id %> </b> </span>
+            <p>Ключ: <%= inv.task %><br>
+               <%= inv.text %>
+            </p>
+            <%= link_to(image_tag("key.png", size: '40'),enter_code_path,class: "secondary-content")%>
+          </li>
+      <% end %>
+</ul>
+</div>
