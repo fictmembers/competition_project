@@ -4,7 +4,7 @@ $(document).ready(function() {
     //$('select').material_select();
         $(".head-home #nav-mobile").on("click", "a", function (event)    //обработка якорей
             {
-                if ($(this).attr('class') != 'sign-in') {
+                if (($(this).attr('class') != 'sign-in')) {
                     event.preventDefault();     //отменяем стандартную обработку нажатия по ссылке
                     var id = $(this).attr('href');
                     if (id != 'about') {

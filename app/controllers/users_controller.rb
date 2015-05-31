@@ -9,15 +9,14 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
-    @invite = Promocode.where(recipient: @user.id)
   end
 
   def code
   end
 
   def check_code
-    user_codes = Promocode.find_by(recipient: current_user.id)
-      if user_codes.task == params[:code]
+    user_code = Promocode.where("task = ? AND recipient = ?", params[:code], current_user.id).take
+      if user_code
         redirect_to companytest_url
       else
         redirect_to enter_code_url
@@ -26,6 +25,14 @@ class UsersController < ApplicationController
 
   def company_test
     @tests = Test.limit(5)
+    @answers = []
+    @tests.each do |test|
+    end
+  end
+
+  def invitations
+    @user = User.find(current_user.id)
+    @invite = Promocode.where(recipient: current_user.id)
   end
 
   def create

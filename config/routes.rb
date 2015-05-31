@@ -20,6 +20,7 @@ CompetitionProject::Application.routes.draw do
   match '/enter_code',      to: 'users#code',      via: 'get'
   match '/checkcode',      to: 'users#check_code',      via: 'post'
   match '/companytest',       to: 'users#company_test' ,         via: 'get' 
+  match '/invitations',       to: 'users#invitations' ,         via: 'get' 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
