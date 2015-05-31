@@ -27,7 +27,9 @@ class UsersController < ApplicationController
     @tests = Test.limit(5)
     @answers = []
     @tests.each do |test|
+
     end
+
   end
 
   def invitations
