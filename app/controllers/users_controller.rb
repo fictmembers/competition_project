@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def company_test
-    @tests = Test.limit(5)
+    @tests = LogicalTest.limit(5)
     @answers = []
     @tests.each do |test|
     end
