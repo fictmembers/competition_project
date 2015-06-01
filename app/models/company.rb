@@ -1,6 +1,7 @@
 class Company < ActiveRecord::Base
 	has_many :promocodes
-
+	has_many :company_knowledge_tests
+	has_many :company_logical_tests
 	before_save {self.email = email.downcase}
 	before_create :create_remember_token
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
