@@ -30,13 +30,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def check_tests
-      if user_code
-        redirect_to companytest_url
-      else
-        redirect_to enter_code_url
-      end
-  end
 
   def invitations
     @user = User.find(current_user.id)

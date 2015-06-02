@@ -2,7 +2,7 @@
 	<div class="col s8 offset-s2">
       <ul class="collection with-header">
         <li class="collection-header"><h4>Тести:</h4></li>
-        <%= form_tag("/checktest") do %>
+        <%= form_tag do %>
 		<% @tests.each do |t| %>
                 <li class="collection-item">
                 		<span class="grey-text text-darken-3"> <%= t.question %></span> <br />
