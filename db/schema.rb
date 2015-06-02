@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531120310) do
+ActiveRecord::Schema.define(version: 20150601111031) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -25,6 +25,34 @@ ActiveRecord::Schema.define(version: 20150531120310) do
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true
   add_index "companies", ["remember_token"], name: "index_companies_on_remember_token"
+
+  create_table "company_knowledge_tests", force: true do |t|
+    t.integer  "company_id"
+    t.string   "question"
+    t.string   "answer1"
+    t.string   "answer2"
+    t.string   "answer3"
+    t.string   "answer4"
+    t.string   "right_answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "company_knowledge_tests", ["company_id"], name: "index_company_knowledge_tests_on_company_id"
+
+  create_table "company_logical_tests", force: true do |t|
+    t.integer  "company_id"
+    t.string   "question"
+    t.string   "answer1"
+    t.string   "answer2"
+    t.string   "answer3"
+    t.string   "answer4"
+    t.string   "right_answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "company_logical_tests", ["company_id"], name: "index_company_logical_tests_on_company_id"
 
   create_table "internals_tests", force: true do |t|
     t.string   "question"
