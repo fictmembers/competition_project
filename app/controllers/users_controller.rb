@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def company_test
 
-    @tests =  LogicalTest.limit(10)
+    @tests =  CompanyLogicalTest.limit(10)
     @answer = []
 
     @tests.each do |test|
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
 
   def knowledge_test
-    @tests =  KnowledgeTest.limit(10)
+    @tests =  CompanyKnowledgeTest.limit(10)
     @answer = []
     @tests.each do |test|
 
@@ -44,56 +44,38 @@ class UsersController < ApplicationController
 
 
   def check_test
-    @tests =  LogicalTest.limit(10)
+    @tests =  CompanyLogicalTest.limit(10)
     @ans = []
     @index = 0
     @right_answers = 0
     @tests.each do |test|
       @ans << params[:answer]["#{test.id}"][:selected_answer]
-      if @ans[@index] == test.right_answer
-        @right_answers+=1
-      end
+        @right_answers+=1 if @ans[@index] == test.right_answer
       @index+=1
     end
     if @right_answers > (@index/2)
-    redirect_to successlogicaltest_url
-  else
-    redirect_to failtest_url
-  end
-end
-
-def check_knowledge_test
-  @tests =  KnowledgeTest.limit(10)
-  @ans = []
-  @index = 0
-  @right_answers = 0
-  @tests.each do |test|
-    @ans << params[:answer]["#{test.id}"][:selected_answer]
-    if @ans[@index] == test.right_answer
-      @right_answers+=1
+      redirect_to successlogicaltest_url
+    else
+      redirect_to failtest_url
     end
-    @index+=1
-  end
-  if @right_answers > (@index/2)
-  redirect_to successtest_url
-else
-  redirect_to failtest_url
-end
-end
-
-
-
-
-
-
-  def check_tests
-      if user_code
-        redirect_to companytest_url
-      else
-        redirect_to enter_code_url
-      end
   end
 
+  def check_knowledge_test
+    @tests =  CompanyKnowledgeTest.limit(10)
+    @ans = []
+    @index = 0
+    @right_answers = 0
+    @tests.each do |test|
+    @ans << params[:answer]["#{test.id}"][:selected_answer]
+      @right_answers+=1 if @ans[@index] == test.right_answer
+      @index+=1
+    end
+    if @right_answers > (@index/2)
+      redirect_to successtest_url
+    else
+      redirect_to failtest_url
+    end
+  end
 
   def invitations
     @user = User.find(current_user.id)

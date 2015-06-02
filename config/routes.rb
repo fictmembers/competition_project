@@ -30,7 +30,6 @@ CompetitionProject::Application.routes.draw do
   match '/knowledgetest',       to: 'users#knowledge_test',        via: 'get'
 
 
-
   match '/invitations',          to: 'users#invitations' ,    via: 'get'
   match '/failtest',             to: 'users#fail_test' ,      via: 'get'
   match '/successlogicaltest',   to: 'users#success_logical_test',   via: 'get'
