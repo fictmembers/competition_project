@@ -33,6 +33,7 @@ class UsersController < ApplicationController
     end
   end
 
+
   def knowledge_test
     @tests =  KnowledgeTest.limit(10)
     @answer = []
@@ -92,6 +93,7 @@ end
         redirect_to enter_code_url
       end
   end
+
 
   def invitations
     @user = User.find(current_user.id)

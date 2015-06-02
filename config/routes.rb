@@ -23,6 +23,7 @@ CompetitionProject::Application.routes.draw do
   match '/enter_code',      to: 'users#code',              via: 'get'
   match '/checkcode',       to: 'users#check_code',        via: 'post'
 
+
   match '/companytest',     to: 'users#company_test' ,     via: 'get'
   match '/checktest',       to: 'users#check_test',        via: 'post'
   match '/checkknowledgetest',  to: 'users#check_knowledge_test',        via: 'post'
@@ -34,6 +35,7 @@ CompetitionProject::Application.routes.draw do
   match '/failtest',             to: 'users#fail_test' ,      via: 'get'
   match '/successlogicaltest',   to: 'users#success_logical_test',   via: 'get'
   match '/successtest',          to: 'users#success_test' ,   via: 'get'
+  match '/check_added',     to: 'tests#check_added_tests' ,      via: 'post'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
