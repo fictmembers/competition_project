@@ -60,17 +60,17 @@ module SessionsHelper
 	end
 
 def current_company_exist?
-if !current_company.nil?
-	true
-else false
-end
+	if !current_company.nil?
+		true
+	else false
+	end
 end
 
 def current_user_exist?
-if !current_user.nil?
-	true
-else false
-end
+	if !current_user.nil?
+		true
+	else false
+	end
 end
 
 	def current_company?(company)
