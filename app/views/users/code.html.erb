@@ -6,16 +6,16 @@
 		<div class="card">
 			<div class="card-image">
             <%= image_tag("exams/#{rand(5)}.jpg")%>
-            <span class="card-title grey-text text-darken-4">Час тестуватися!</span>       
+            <span class="card-title grey-text text-darken-4">Час тестуватися!</span>
             </div>
             <div class="card-content">
-           	
-                  <%= form_tag('/checkcode') do  %> 
+
+                  <%= form_tag('/checkcode') do  %>
                     <!-- session_path - post(create) -->
                     <%= label_tag :code, "Код доступу" %>
                     <%= text_field_tag :code %>
                     <%= submit_tag "Розпочати!", class: "btn btn-primary" %>
-                  <% end %>  					
+                  <% end %>
             </div>
 		</div>
 	</div>

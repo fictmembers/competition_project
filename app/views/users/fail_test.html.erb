@@ -1,0 +1,19 @@
+<%= render 'shared/header_index' %>
+<br><br><br><br><br><br>
+<div class="row">
+<div class="col s6 offset-s3">
+  <div class="card  ">
+    <center>  <i class="mdi-content-report center-align"></i> <center>
+    <span class="card-title">
+      <div class="card-content black-text center-align">
+        Шкодуємо!<br>Нажаль Ви не набрали необхідної кількості балів!
+        </div>
+      </span>
+      <div class="valign-wrapper">
+      <div class="button center-align center-align">
+      <%= link_to("До кабінету", user_path(current_user.id),class: "cabinet_button waves-effect waves-light btn-large") %>
+   </div>
+</div>
+  </div>
+</div>
+</div>

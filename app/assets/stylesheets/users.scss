@@ -11,6 +11,8 @@ head,body
 	height: auto;
 }
 
+$redarken: #b71c1c;
+$greenaccent: #00c853;
 .responsive-img
 {
  margin-top: 10%;
@@ -19,6 +21,26 @@ head,body
 .mdi-toggle-check-box, .mdi-action-account-balance, .mdi-action-trending-up
 {
 	font-size: 160px;
+}
+
+.mdi-content-report
+{
+	color: $redarken;
+	font-size: 160px;
+	margin-bottom: -15%;
+}
+
+.mdi-action-done-all, .mdi-action-done
+{
+	color: $greenaccent;
+	font-size: 160px;
+	margin-bottom: -15%;
+}
+
+.cabinet_button
+{
+	margin-top: 20%;
+	margin-bottom: -20%;
 }
 
 .items-content

@@ -24,13 +24,64 @@ class UsersController < ApplicationController
   end
 
   def company_test
-    @tests = Test.limit(5)
-    @answers = []
+    @tests =  LogicalTest.limit(10)
+    @answer = []
     @tests.each do |test|
 
     end
-
   end
+
+  def knowledge_test
+    @tests =  KnowledgeTest.limit(10)
+    @answer = []
+    @tests.each do |test|
+
+    end
+  end
+
+
+  def check_test
+    @tests =  LogicalTest.limit(10)
+    @ans = []
+    @index = 0
+    @right_answers = 0
+    @tests.each do |test|
+      @ans << params[:answer]["#{test.id}"][:selected_answer]
+      if @ans[@index] == test.right_answer
+        @right_answers+=1
+      end
+      @index+=1
+    end
+    if @right_answers > (@index/2)
+    redirect_to successlogicaltest_url
+  else
+    redirect_to failtest_url
+  end
+end
+
+def check_knowledge_test
+  @tests =  KnowledgeTest.limit(10)
+  @ans = []
+  @index = 0
+  @right_answers = 0
+  @tests.each do |test|
+    @ans << params[:answer]["#{test.id}"][:selected_answer]
+    if @ans[@index] == test.right_answer
+      @right_answers+=1
+    end
+    @index+=1
+  end
+  if @right_answers > (@index/2)
+  redirect_to successtest_url
+else
+  redirect_to failtest_url
+end
+end
+
+
+
+
+
 
   def invitations
     @user = User.find(current_user.id)
