@@ -18,6 +18,16 @@
     </div>
 
     <div>
+      <%= f.label  :speciality, "Спеціальність:" %> </br>
+      <%= f.select :speciality, user_speciality, class: "select", :prompt => "Оберіть спеціальність..."%>
+    </div>
+
+    <div>
+      <%= f.label  :year_of_education, "Рік навчання:" %> </br>
+      <%= f.select :year_of_education, user_education, class: "select", :prompt => "Оберіть поточний курс..."%>
+    </div>
+
+    <div>
       <%= f.label :password,"Пароль" %>
       <%= f.password_field :password %>
     </div>

@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 	validates(:name,presence:true,length: {maximum: 50})
 	validates(:email,presence:true,uniqueness: {case_sensetive: false},format: {with: VALID_EMAIL_REGEX})
 	validates(:password,length:{minimum: 6})
+	validates(:birthday,          presence: true)
+	validates(:year_of_education, presence: true)
+	validates(:speciality,        presence: true)
 
 	has_secure_password
 

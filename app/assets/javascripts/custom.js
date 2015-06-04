@@ -1,6 +1,11 @@
 $(document).ready(function() {
     $('.slider').slider({full_width: true});
     $('.dropdown-button').dropdown();
+
+    $('.datepicker').pickadate({
+      selectMonths: true, 
+      selectYears: 15 
+    });
     //$('select').material_select();
         $(".head-home #nav-mobile").on("click", "a", function (event)    //обработка якорей
             {

@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 
 
   def check_test
-    @tests =   @company.company_logical_tests.limit(10)
+    @tests =   @company.logical_tests.limit(10)
     @ans = []
     @index = 0
     @right_answers = 0
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
   end
 
   def check_knowledge_test
-    @tests = @company.company_knowledge_tests.limit(10)
+    @tests = @company.knowledge_tests.limit(10)
     @ans = []
     @index = 0
     @right_answers = 0
@@ -105,6 +105,6 @@ class UsersController < ApplicationController
 
     def user_params
      params.require(:user).permit(:name, :email, :password,
-                                  :password_confirmation)
+                                  :password_confirmation, :birthday, :year_of_education, :speciality)
     end
 end
