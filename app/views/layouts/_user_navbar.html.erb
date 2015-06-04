@@ -1,16 +1,23 @@
-<nav class="col s2 cyan darken-3 left-navbar">
-  	  <%= image_tag("male.png",class: "circle responsive-img") %>
-      <h4 class="center-align">
+<div class="col s2">
+  <div class="card cyan darken-3">
+      <%= image_tag("male.png",class: "circle responsive-img") %>
+      <h4 class="center-align white-text">
         <%= @user.name %>
       </h4>
-      <div class="items-content">
-      <ul>
-      	<li><%= link_to "Мій профіль",user_path(current_user.id)%></li><br>
-      	<li><%= link_to "Пробне тестування","#"%></li><br>
-      	<li><%= link_to "Моя статистика","#"%></li><br>
-        <li><%= link_to "Усі користувачі", users_path %></li><br>
-      	<li><%= link_to "Оцінка компетенцій",invitations_path%></li><br>
-        <li><%= link_to("Вихід",signout_path,method: 'delete',class: "user-sign-in") %></li>
-      </ul>
+
+            <div class="card-action text-cyan lighten-5">
+              <left>
+                <%= link_to "Моя Анкета",   developpage_path        %> <br>
+                <%= link_to "Тестування",   developpage_path        %> <br>
+                <%= link_to "Запрошення",   invitations_path        %> <br>
+                <%= link_to "Учасники",     users_path              %> <br>
+              </left>
+            </div>
+
+            <div class="card-action">
+              <left>
+                <%= link_to("Вихід",signout_path,method: 'delete',class: "user-sign-in") %>
+              </left>
+            </div>
       </div>
-</nav>
+</div>

@@ -1,11 +1,12 @@
 <% provide(:title, @user.name) %>
-
+<%= render 'layouts/user_header' %>
 
 <div class="row">
-<%= render 'layouts/user_navbar' %>
-    <div class="col s9">
-      <%= render 'layouts/header_user' %>
+    <%= render 'layouts/user_navbar' %>
+
+    <div class="col s10">
       <div class="card white">
+
         <div class="card-content dark-text">
             <span class="card-title black-text">
               Ласкаво просимо до Вашого особистого кабінету,  <%= @user.name %>!
