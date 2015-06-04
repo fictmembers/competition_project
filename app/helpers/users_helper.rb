@@ -6,7 +6,7 @@ module UsersHelper
   	end
 
   	def user_speciality
-  		list_of_speciality = ["Комп'ютерні науки", "Програмна інженерія", "Комп'ютерна інженерія"]
+  		list_of_speciality = ["Computer Science", "Software Engineering", "Computer Engineering"]
 		s = ''
 		list_of_speciality.each do |spec|
 			s << "<option value='#{spec}'>#{spec}</option>"
