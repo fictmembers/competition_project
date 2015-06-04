@@ -1,0 +1,19 @@
+<%= render 'shared/header_index' %>
+<br><br><br><br><br><br>
+<div class="row">
+<div class="col s8 offset-s2">
+  <div class="card  ">
+    <center>  <i class="mdi-alert-error center-align"></i> <center>
+    <span class="card-title">
+      <div class="card-content black-text center-align">
+        Сторінка знаходитсья в стані розробки!
+        </div>
+      </span>
+      <div class="valign-wrapper">
+      <div class="button center-align center-align">
+      <%= link_to("До кабінету", user_path(current_user.id),class: "cabinet_button waves-effect waves-light btn-large") %>
+   </div>
+</div>
+  </div>
+</div>
+</div>

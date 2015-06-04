@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :correct_company
   def index
     @users = User.paginate(page: params[:page])
   end
@@ -25,7 +26,7 @@ class UsersController < ApplicationController
 
   def company_test
 
-    @tests =  CompanyLogicalTest.limit(10)
+    @tests =   @company.company_logical_tests.limit(10)
     @answer = []
 
     @tests.each do |test|
@@ -35,7 +36,7 @@ class UsersController < ApplicationController
 
 
   def knowledge_test
-    @tests =  CompanyKnowledgeTest.limit(10)
+    @tests =   @company.company_knowledge_tests.limit(10)
     @answer = []
     @tests.each do |test|
 
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
 
 
   def check_test
-    @tests =  CompanyLogicalTest.limit(10)
+    @tests =   @company.company_logical_tests.limit(10)
     @ans = []
     @index = 0
     @right_answers = 0
@@ -61,7 +62,7 @@ class UsersController < ApplicationController
   end
 
   def check_knowledge_test
-    @tests =  CompanyKnowledgeTest.limit(10)
+    @tests = @company.company_knowledge_tests.limit(10)
     @ans = []
     @index = 0
     @right_answers = 0
@@ -82,6 +83,7 @@ class UsersController < ApplicationController
     @invite = Promocode.where(recipient: current_user.id)
   end
 
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -93,6 +95,11 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+  def correct_company
+   @company = current_company
+  end
+
 
   private
 
