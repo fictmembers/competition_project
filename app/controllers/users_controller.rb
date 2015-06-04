@@ -100,6 +100,9 @@ class UsersController < ApplicationController
    @company = current_company
   end
 
+  def account
+    @user = User.find(current_user.id)
+  end
 
   private
 
