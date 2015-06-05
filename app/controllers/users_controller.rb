@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :correct_company
   def index
     @users = User.paginate(page: params[:page])
   end
@@ -26,7 +25,7 @@ class UsersController < ApplicationController
 
   def company_test
 
-    @tests =   @company.company_logical_tests.limit(10)
+    @tests =   LogicalTest.limit(10)
     @answer = []
 
     @tests.each do |test|
@@ -36,7 +35,7 @@ class UsersController < ApplicationController
 
 
   def knowledge_test
-    @tests =   @company.company_knowledge_tests.limit(10)
+    @tests =   KnowledgeTest.limit(10)
     @answer = []
     @tests.each do |test|
 
@@ -45,7 +44,7 @@ class UsersController < ApplicationController
 
 
   def check_test
-    @tests =   @company.logical_tests.limit(10)
+    @tests =   LogicalTest.limit(10)
     @ans = []
     @index = 0
     @right_answers = 0
@@ -62,7 +61,7 @@ class UsersController < ApplicationController
   end
 
   def check_knowledge_test
-    @tests = @company.knowledge_tests.limit(10)
+    @tests = KnowledgeTest.limit(10)
     @ans = []
     @index = 0
     @right_answers = 0
@@ -94,10 +93,6 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def correct_company
-   @company = current_company
   end
 
   def account
