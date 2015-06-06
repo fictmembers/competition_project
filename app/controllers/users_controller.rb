@@ -24,9 +24,11 @@ class UsersController < ApplicationController
         redirect_to enter_code_url
       end
   end
+
   def skills_task
     @task = SkillsTask.first
   end
+
   def company_test
     @tests =  CompanyLogicalTest.limit(10)
   end
