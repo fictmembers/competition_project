@@ -8,9 +8,10 @@
             <div class="card-action text-cyan lighten-5">
               <left>
                 <%= link_to "Моя Анкета",   account_path            %> <br>
-                <%= link_to "Тестування",   developpage_path        %> <br>
+                <%= link_to "Оцінити компетенції",   companytest_path        %> <br>
                 <%= link_to "Запрошення",   invitations_path        %> <br>
                 <%= link_to "Учасники",     users_path              %> <br>
+                <%= link_to "Змінити профіль",     edit_user_path(current_user.id)  %> <br>
               </left>
             </div>
 

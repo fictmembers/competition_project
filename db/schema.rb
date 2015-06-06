@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604162634) do
+ActiveRecord::Schema.define(version: 20150605060224) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -93,6 +93,13 @@ ActiveRecord::Schema.define(version: 20150604162634) do
   end
 
   add_index "promocodes", ["task"], name: "index_promocodes_on_task", unique: true
+
+  create_table "skills_tasks", force: true do |t|
+    t.text     "task"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "deadline"
+  end
 
   create_table "tests", force: true do |t|
     t.string   "question"

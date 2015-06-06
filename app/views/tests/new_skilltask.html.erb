@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col s6 card-panel white offset-s3">
+		<div class="card-title">
+			<h5> Додати нове завдання для проектування та програмування </h5>
+		</div>
+		<%= form_tag(createskilltask_path) do  %>
+			<%= label_tag(:task, "Введіть завдання") %>
+			<%= text_area_tag(:task) %>
+
+			<%= label_tag(:deadline, "Введіть срок(у днях) за який користувач повинен зробити завдання") %>
+			<%= text_field_tag(:deadline) %>
+			<span> Завдання буде викладено на GITHUB </span> <br />
+			<%= submit_tag "Завантажити у БД", class: "btn btn-large btn-primary" %>
+		<% end %>
+		<%= link_to "До кабінету", company_path(current_company.id), class: "blue-text text-darken-2"%>
+	</div>
+
+</div>

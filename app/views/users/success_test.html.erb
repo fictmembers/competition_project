@@ -6,13 +6,14 @@
     <center>  <i class="mdi-action-done-all center-align"></i> <center>
     <span class="card-title">
       <div class="card-content black-text center-align">
-        Вітаємо! <br> Ви набрали необхідну кількість балів!
+       <span> Вітаємо! <br /> Ви набрали необхідну кількість балів! <br /> Тепер ви можете перейти до оцінювання ваших компетенцій </span>
         <%= @right_answers %>
         </div>
       </span>
       <div class="valign-wrapper">
       <div class="button center-align center-align">
       <%= link_to("До кабінету", user_path(current_user.id),class: "cabinet_button waves-effect waves-light btn-large") %>
+      <%= link_to("Продовжити!", skillstask_path,class: "cabinet_button waves-effect waves-light btn-large") %>
    </div>
 </div>
   </div>

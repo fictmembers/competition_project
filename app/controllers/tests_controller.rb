@@ -22,6 +22,15 @@ class TestsController < ApplicationController
     end
   end
 
+  def new_skilltask
+    
+  end
+
+  def create_skilltask
+    SkillsTask.create(:task => params[:task],:deadline => params[:task])
+    redirect_to company_url(current_company.id)
+  end
+
   def index
     @logical_tests = LogicalTest.all
     @knowledge_tests = KnowledgeTest.all

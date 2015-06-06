@@ -35,9 +35,12 @@ CompetitionProject::Application.routes.draw do
   match '/failtest',             to: 'users#fail_test' ,      via: 'get'
   match '/successlogicaltest',   to: 'users#success_logical_test',   via: 'get'
   match '/successtest',          to: 'users#success_test' ,   via: 'get'
-  match '/developpage',          to: 'users#develop_page' ,   via: 'get'
-  match '/check_added',          to: 'tests#check_added_tests' ,      via: 'post'
+  match '/developpage',          to: 'users#develop_page' ,   via: 'post'
+  match '/skillstask',          to: 'users#skills_task' ,   via: 'get'
 
+  match '/check_added',          to: 'tests#check_added_tests' ,      via: 'post'
+  match '/newskilltask',          to: 'tests#new_skilltask' ,      via: 'get'
+  match '/createskilltask',          to: 'tests#create_skilltask' ,      via: 'post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
