@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
+ruby '2.1.2'					
+#ruby-gemset=railstutorial_rails_4
 
+gem 'rails','4.0.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+#Bootstrap and custom css
 gem 'materialize-sass'
 gem 'sqlserver-foreigner'
 gem 'sass-rails'
@@ -8,6 +14,11 @@ gem 'bcrypt-ruby', '3.1.2'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
   gem 'sqlite3' , '1.3.8'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
 
 group :test do
@@ -25,12 +36,3 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
-group :production do
-  gem 'thin'  
-end
-
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
- ruby '2.1.2'
