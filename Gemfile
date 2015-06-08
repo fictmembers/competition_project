@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'materialize-sass'
-gem 'sqlite3' , '1.3.8'
 gem 'sqlserver-foreigner'
 gem 'sass-rails'
 gem 'bcrypt-ruby', '3.1.2'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
+  gem 'sqlite3' , '1.3.8'
 end
 
 group :test do
