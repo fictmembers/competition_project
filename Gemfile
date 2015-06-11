@@ -1,6 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.1.2'					
-#ruby-gemset=railstutorial_rails_4
 
 gem 'rails','4.0.2'
 gem 'will_paginate', '3.0.4'
@@ -36,3 +34,5 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
+ruby '2.1.2'					
+#ruby-gemset=railstutorial_rails_4
