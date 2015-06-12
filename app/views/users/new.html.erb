@@ -16,7 +16,10 @@
       <%= f.label :email %>
       <%= f.text_field :email %>
     </div>
-
+    <div>
+      <%= f.label  :birthday, "Спеціальність:" %> </br>
+      <%= f.select :birthday, type: "date", class: "datepicker" %>
+    </div>
     <div>
       <%= f.label  :speciality, "Спеціальність:" %> </br>
       <%= f.select :speciality, user_speciality, class: "select", :prompt => "Оберіть спеціальність..."%>
